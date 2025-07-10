@@ -1,0 +1,97 @@
+/* ========== PREMIUM NEXT-GEN UI ========== */
+:root {
+  --holo-bg: linear-gradient(to right, #f8fbff, #e2ebf5);
+  --holo-glass: rgba(255, 255, 255, 0.55);
+  --holo-border: rgba(0, 0, 0, 0.1);
+  --holo-text: #1a1a1a;
+  --holo-accent: #4e91fc;
+  --holo-accent-hover: #6b68f7;
+  --holo-blur: blur(20px);
+  --font-holo: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 3rem;
+  min-height: 100vh;
+  background: var(--holo-bg);
+  font-family: var(--font-holo);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  color: var(--holo-text);
+}
+
+h1 {
+  font-size: 3.2rem;
+  background: linear-gradient(90deg, var(--holo-accent), var(--holo-accent-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  background: var(--holo-glass);
+  border: 1px solid var(--holo-border);
+  border-radius: 20px;
+  padding: 3rem;
+  backdrop-filter: var(--holo-blur);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2.5rem;
+}
+
+input[type="file"] {
+  padding: 1rem;
+  border: 2px dashed var(--holo-accent);
+  background: transparent;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: var(--holo-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="file"]:hover {
+  background: #eef2ff;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: var(--holo-accent);
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(78, 145, 252, 0.3);
+}
+
+button:hover {
+  background: var(--holo-accent-hover);
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(107, 104, 247, 0.4);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 2rem;
+    gap: 2rem;
+  }
+  button {
+    padding: 0.8rem 1.5rem;
+  }
+}
